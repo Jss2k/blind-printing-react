@@ -1,0 +1,42 @@
+@import "./../../variables";
+
+.header {
+  height: $headerHeight;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+
+  .header-wrap {
+    position: relative;
+    max-width: 1450px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    nav {
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li {
+          margin-left: 1.5rem;
+        }
+      }
+    }
+
+    .header-logo {
+      width: 13rem;
+
+      img {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+   .header-link {
+      font-size: 1.8rem;
+      line-height: 1;
+      text-transform: uppercase
+    }
+  }
+}
