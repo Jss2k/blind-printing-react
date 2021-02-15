@@ -1,15 +1,16 @@
 import React from 'react'
 import { Switch, Route  } from 'react-router-dom'
 
-import MainLayout from './layouts/mainlayout'
+import MainLayout from './layouts/mainlayout/mainlayout'
 
 import Homepage from './pages/homepage/homepage'
 import Learnpage from './pages/learnpage/learnpage'
 import Testpage from './pages/testpage/testpage'
 import Loginpage from './pages/loginpage/loginpage'
 import Registrationpage from './pages/registrationpage/registrationpage'
-import Completepage from './pages/completepage/completepage'
 import Resultspage from './pages/resultspage/resultspage'
+import CompleteTest from './pages/testpage/completetest'
+import StartTest from './pages/testpage/starttest'
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
         )} />
       </Switch>
       <Switch>
-        <Route exact path="/learn" render={() => (
+        <Route path="/learn" render={() => (
           <MainLayout>
             <Learnpage />
           </MainLayout>
@@ -37,28 +38,35 @@ function App() {
         )} />
       </Switch>
       <Switch>
-        <Route exact path="/login" render={() => (
+        <Route path="/test/start" render={() => (
+            <MainLayout>
+              <StartTest />
+            </MainLayout>
+          )} />
+      </Switch>
+      <Switch>
+          <Route path="/test/complete" render={() => (
+            <MainLayout>
+              <CompleteTest />
+            </MainLayout>
+          )} />
+      </Switch>
+      <Switch>
+        <Route path="/login" render={() => (
           <MainLayout>
             <Loginpage />
           </MainLayout>
         )} />
       </Switch>
       <Switch>
-        <Route exact path="/registration" render={() => (
+        <Route path="/registration" render={() => (
           <MainLayout>
             <Registrationpage />
           </MainLayout>
         )} />
       </Switch>
       <Switch>
-        <Route exact path="/complete" render={() => (
-          <MainLayout>
-            <Completepage />
-          </MainLayout>
-        )} />
-      </Switch>
-      <Switch>
-        <Route exact path="/results" render={() => (
+        <Route path="/results" render={() => (
           <MainLayout>
             <Resultspage />
           </MainLayout>
