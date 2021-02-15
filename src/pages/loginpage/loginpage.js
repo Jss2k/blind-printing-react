@@ -1,12 +1,9 @@
 import React from 'react'
 import './styles.scss'
+import SignIn from './../../components/signin/signin'
 
-const Loginpage = props => {
-  return (
-    <section className="learn-page">
-      
-    </section>
-  )
+const Login = props => {
+  return <SignIn />
 }
 
-export default Loginpage
+export default Login
