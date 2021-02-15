@@ -1,24 +1,28 @@
-@import "./../../variables";
+@import "./../../scss/variables";
 
 .header {
   height: $headerHeight;
   box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  background: rgba(255, 255, 255, 0.3);
 
   .header-wrap {
     position: relative;
     max-width: 1450px;
     height: 100%;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     nav {
+      height: inherit;
       ul {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: inherit;
         li {
+          height: 100%;
           margin-left: 1.5rem;
         }
       }
@@ -34,9 +38,21 @@
     }
 
    .header-link {
+      height: 100%;
+      display: block;
       font-size: 1.8rem;
-      line-height: 1;
-      text-transform: uppercase
+      text-transform: uppercase;
+      padding: 0 0.5vw;
+      margin: auto 0;
+
+      span {
+        line-height: $headerHeight;
+        height:  $headerHeight;
+      }
+    }
+
+    .header-link:hover {
+      background: rgba(0,0,0,.1);
     }
   }
 }

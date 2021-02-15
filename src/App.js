@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route  } from 'react-router-dom'
 
-import MainLayout from './layouts/mainlayout'
+import MainLayout from './layouts/mainlayout/mainlayout'
 
 import Homepage from './pages/homepage/homepage'
 import Learnpage from './pages/learnpage/learnpage'

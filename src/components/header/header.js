@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './styles.scss'
 
-import Logo from './../../assets/logo.png'
+import Logo from './../../assets/logoBMP.png'
 
 const Header = props => {
 
@@ -20,17 +20,17 @@ const Header = props => {
         <ul>
           <li>
             <Link className="header-link" to="/">
-              Home
+              <span>Home</span>
             </Link>
           </li>
           <li>
             <Link className="header-link" to="/learn">
-              Learn
+              <span>Learn</span>
             </Link>
           </li>
           <li>
             <Link className="header-link" to="/test">
-              Typing test
+              <span>Typing test</span>
             </Link>
           </li>
         </ul>
@@ -41,12 +41,12 @@ const Header = props => {
 
           <li>
              <Link className="header-link" to="/registration">
-               Register
+                <span>Register</span>
              </Link>
           </li>
           <li>
             <Link className="header-link" to="/login">
-              Login
+              <span>Login</span>
             </Link>
           </li>
 

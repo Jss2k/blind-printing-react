@@ -1,0 +1,71 @@
+.start-screen {
+  height: 100%;
+  .wrap {
+    height: 100%;
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      color: whitesmoke;
+      text-align: center;
+
+      .title {
+        font-size: 3.6vw;
+        text-transform: uppercase;
+      }
+
+      .subtitle{
+        font-size: 2.2vw;
+        line-height: 3vw;
+      }
+
+      .call-to-action {
+        text-align: center;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+
+        a {
+          display: block;
+          background: rgba(0,0,0,0.7);
+          width: 35%;
+          height: 12vh;
+          color: whitesmoke;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: uppercase;
+          font-size: 2.4rem;
+          transition: 0.4s;
+        }
+
+        a:hover {
+          box-shadow: inset 550px 0 0 0 rgba(0, 0, 0, 0.7);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .start-screen .main .subtitle {
+    font-size: 3.2vw;
+    line-height: 4.5vw;
+  }
+
+  .start-screen .main .title {
+    font-size: 4.6vw;
+    text-transform: uppercase;
+}
+
+  .start-screen .main .call-to-action a {
+    font-size: 1.7rem;
+  }
+
+  .start-screen .main .call-to-action a:hover {
+    box-shadow: inset 350px 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+}

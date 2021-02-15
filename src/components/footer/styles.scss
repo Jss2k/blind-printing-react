@@ -1,9 +1,10 @@
-@import "./../../variables";
+@import "./../../scss/variables";
 
 .footer {
   font-size: 1.5rem;
   height: $footerHeight;
   box-shadow: 0 -2px 4px rgba(0,0,0,.1);
+  background: rgba(255, 255, 255, 0.3);
   .wrap {
     max-width: 1450px;
     padding: 20px 10px;
