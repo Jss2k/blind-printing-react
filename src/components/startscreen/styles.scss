@@ -49,7 +49,7 @@
   }
 }
 
-@media only screen and (max-width: 980px) {
+@media (max-width: 980px) {
   .start-screen .main .subtitle {
     font-size: 3.2vw;
     line-height: 4.5vw;
@@ -61,7 +61,7 @@
 }
 
   .start-screen .main .call-to-action a {
-    font-size: 1.7rem;
+    font-size: 1.7rem !important;
   }
 
   .start-screen .main .call-to-action a:hover {

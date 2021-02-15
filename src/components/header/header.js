@@ -29,7 +29,7 @@ const Header = props => {
             </Link>
           </li>
           <li>
-            <Link className="header-link" to="/test">
+            <Link className="header-link" to="/test/start">
               <span>Typing test</span>
             </Link>
           </li>
