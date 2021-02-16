@@ -67,7 +67,7 @@ const Header = props => {
           {currentUser && [
             <li key={1}>
               <Link className="header-link" to="/results">
-                <span>My Results</span>
+                <span>Results</span>
               </Link>
             </li>,
             <li key={2}>

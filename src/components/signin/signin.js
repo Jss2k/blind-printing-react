@@ -56,6 +56,7 @@ const SignIn = props => {
     }
 
     return (
+      
       <AuthWrapper {...configAuthWrapper}>
         <div className="formWrap">
         {errors.length > 0 && (

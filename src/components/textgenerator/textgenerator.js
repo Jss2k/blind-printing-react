@@ -7,9 +7,9 @@ const TextGenerator = props => {
   const [paragraphs, setParagraphs] = useState([])
   const paragraphsNumber = 1
 
+  const url = `https://baconipsum.com/api/?type=all-meat&paras=${paragraphsNumber}&start-with-lorem=1`
 
   useEffect(() => {
-    const url = `https://baconipsum.com/api/?type=all-meat&paras=${paragraphsNumber}&start-with-lorem=1`
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
