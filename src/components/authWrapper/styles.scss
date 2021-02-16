@@ -1,7 +1,8 @@
 .authWrapper {
   width: 100%;
   max-width: 40rem;
-  margin: 4rem auto 6rem;
+  margin: 0 auto;
+  transform: translateY(4rem);
   border: 1px solid black;
 
   .wrap {

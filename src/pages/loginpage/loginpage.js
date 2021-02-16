@@ -1,9 +1,13 @@
 import React from 'react'
-import './styles.scss'
 import SignIn from './../../components/signin/signin'
+import './styles.scss'
 
 const Login = props => {
-  return <SignIn />
+  return (
+    <div className="login-page">
+      <SignIn />
+    </div>
+  )
 }
 
 export default Login
