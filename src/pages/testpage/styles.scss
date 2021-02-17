@@ -3,9 +3,11 @@
   text-align: center;
   color: white;
 }
+
 .test-page {
-    overflow: auto;
+    height: auto !important;
 }
+
 textarea {
   margin-top: 3rem;
   width: 100%;
