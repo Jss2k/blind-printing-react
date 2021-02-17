@@ -4,8 +4,8 @@ import React, {
   useContext,
   useState,
   useEffect
-} from 'react';
-import { useHistory } from 'react-router-dom'
+} from 'react'
+// import { useHistory } from 'react-router-dom'
 import { initialState, reducer, ActionTypes } from './state';
 
 export const typingContext = createContext ([
@@ -23,9 +23,8 @@ export const TypingProvider = ({ children }) => {
 }
 
 export const useTyping = () => {
-
-  const history = useHistory()
-  const [state, dispatch] = useContext(typingContext);
+  const [state, dispatch] = useContext(typingContext)
+  // const history = useHistory()
   const [paragraphs, setParagraphs] = useState(' ')
 
   const paragraphsNumber = 1
@@ -48,6 +47,7 @@ export const useTyping = () => {
     return /[а-я]/i.test(str)
   }
 
+
   const getText = () => {
     dispatch({ type: ActionTypes.GET_TEXT, payload: paragraphs })
   }
@@ -56,16 +56,20 @@ export const useTyping = () => {
     
     if (checkCyrillic(value)) {
       alert('Please change your keyboard layout to English.')
-      return stopTimer()
+      stopTimer()
+      value = value.slice(0, -1)
     } 
-    
+
     if (!state.timerId) {
       startTimer()
     }
 
-    if (state.input.length >= state.text.length ) {
+    if ((state.characters + state.errors) >= state.textLength - 1 ) {
       stopTimer()
+      // history.push('/results')
     }
+
+
     dispatch({ type: ActionTypes.CHANGE_INPUT, payload: value })
   }
 

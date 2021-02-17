@@ -1,0 +1,7 @@
+const resultsTypes = {
+  ADD_NEW_RESULT_START: 'ADD_NEW_RESULT_START',
+  FETCH_RESULTS_START: 'FETCH_RESULTS_START',
+  SET_RESULTS: 'SET_RESULTS'
+}
+
+export default resultsTypes

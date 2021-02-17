@@ -93,7 +93,7 @@ ul, li {
   display: inline-block;
   width: 100%;
   min-height: 100%;
-  padding: 3rem 0 6rem 25.0rem;
+  padding-left: 25.0rem;
   border-bottom: 1px solid #d3d3d3;
 
   .sidebar {
@@ -103,15 +103,12 @@ ul, li {
     height: 100%;
     z-index: 1;
     border-right: 1px solid #d3d3d3;
+    background: rgba(255, 255, 255, 0.3);
   }
 
   .content {
     padding: 0 10px;
   }
-}
-
-.dashboardLayout {
-  height: calc(100vh - $footerHeight -$footerHeight);
 }
 
 @media only screen and (max-width: 980px) {
@@ -129,4 +126,8 @@ ul, li {
       margin-bottom: 2.5rem;
     }
   }
+}
+
+.formError {
+  color: rgba(206, 50, 50, 0.884);
 }
