@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { signOutUserStart } from './../../redux/User/user.actions'
@@ -37,13 +37,13 @@ const Header = props => {
             </Link>
           </li>
           <li>
-            <Link className="header-link" to="/learn">
-              <span>Learn</span>
+            <Link className="header-link" to="/wpm-calculator">
+              <span>Calculator</span>
             </Link>
           </li>
           <li>
             <Link className="header-link" to="/test/start">
-              <span>Typing test</span>
+              <span>Test</span>
             </Link>
           </li>
         </ul>

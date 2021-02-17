@@ -8,12 +8,12 @@ import WithAuth from './hoc/withAuth'
 import MainLayout from './layouts/mainlayout/mainlayout'
 
 import Homepage from './pages/homepage/homepage'
-import Learnpage from './pages/learnpage/learnpage'
+import Calculatorpage from './pages/calculatorpage/calculatorpage'
 import Testpage from './pages/testpage/testpage'
 import Loginpage from './pages/loginpage/loginpage'
 import Registrationpage from './pages/registrationpage/registrationpage'
 import Resultspage from './pages/resultspage/resultspage'
-import CompleteTest from './pages/testpage/completetest'
+// import CompleteTest from './pages/testpage/completetest'
 import StartTest from './pages/testpage/starttest'
 import Recovery from './pages/recoverypage/recoverypage'
 
@@ -35,9 +35,9 @@ const App = props => {
         )} />
       </Switch>
       <Switch>
-        <Route path="/learn" render={() => (
+        <Route path="/wpm-calculator" render={() => (
           <MainLayout>
-            <Learnpage />
+            <Calculatorpage />
           </MainLayout>
         )} />
       </Switch>
@@ -56,11 +56,6 @@ const App = props => {
           )} />
       </Switch>
       <Switch>
-          <Route path="/test/complete" render={() => (
-            <MainLayout>
-              <CompleteTest />
-            </MainLayout>
-          )} />
       </Switch>
       <Switch>
         <Route path="/login" render={() => (

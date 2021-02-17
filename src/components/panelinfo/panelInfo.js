@@ -1,24 +1,27 @@
   
 import React from 'react';
 
-import { wpmNormal } from './../../Utils/countCorrectCharacters';
+import { wpmGross , wpmNet } from './../../Utils/countCorrectCharacters';
 import { useTyping } from './../../state/context';
 import Indicator from './../indicator/indicator';
 
+import './styles.scss'
+
 const PanelInfo = () => {
-  const { state: { characters, seconds }  } = useTyping();
+  const { state: { characters, seconds, textLength, errors, allErrors }  } = useTyping();
+  let netWPM = wpmNet(characters, seconds, errors) || 0
+  let grossWPM = wpmGross(characters, seconds) || 0
+
+  let leftChar = textLength - (characters + errors)
+  let accuracy = (((textLength - allErrors) / textLength) * 100).toFixed(2) || 100
+
   return (
-    // <div className='typing-speed'>
-    //   Typing speed
-    //   <div>{seconds}</div>
-    //   <div>WPM: {wpmNormal(characters, seconds)}</div>
-    //   <div>Correct characters: {characters}</div>
-    //   <button onClick={onReset}>Reset</button>
-    // </div>
     <div className="indicators">
-      <Indicator caption={"Total"} value={characters}/>
-      <Indicator caption={"WPM"} value={wpmNormal(characters, seconds)}/>
       <Indicator caption={"Time"} value={seconds}/>
+      <Indicator caption={"characters left"} value={leftChar }/>
+      <Indicator caption={"gross wpm"} value={grossWPM}/>
+      <Indicator caption={"Error"} value={accuracy}/>
+      <Indicator caption={"net wpm"} value={netWPM}/>
     </div>
   )
 }

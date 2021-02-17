@@ -1,0 +1,17 @@
+.indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 190px;
+  width: 80%;
+  margin: 3rem auto;
+  flex-wrap: wrap;
+
+  }
+  
+  @media (max-width: 980px) {
+    .indicators {
+      width: 95%;
+    }
+  
+  }

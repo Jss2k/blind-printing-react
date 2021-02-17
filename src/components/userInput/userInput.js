@@ -1,19 +1,17 @@
-  
-import React from 'react';
+  import React from 'react'
 
-import { useTyping } from './../../state/context';
+import { useTyping } from './../../state/context'
 
 const UserInput = () => {
   const {
-    state: { input },
-    onInput,
-  } = useTyping();
+    state: { input, textLength }, onInput} = useTyping()
 
   return (
     <textarea
       rows={7}
       value={input}
       autoFocus
+      maxLength={textLength}
       onChange={(e) => onInput(e.target.value)}
     />
   )
