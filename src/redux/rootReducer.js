@@ -3,16 +3,17 @@ import { persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
 import userReducer from './User/user.reducer'
+import resultsReducer from './Results/results.reducer'
 
 export const rootReducer = combineReducers({
-  user: userReducer
-  // scoreData: scoresReducer
+  user: userReducer,
+  resultsData: resultsReducer
 })
 
 const configStorage = {
   key: 'root',
   storage,
-  // whitelist: ['scoresData']
+
 }
 
 export default persistReducer(configStorage, rootReducer)

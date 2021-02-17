@@ -16,6 +16,7 @@ import Resultspage from './pages/resultspage/resultspage'
 // import CompleteTest from './pages/testpage/completetest'
 import StartTest from './pages/testpage/starttest'
 import Recovery from './pages/recoverypage/recoverypage'
+import DashBoardLayout from './layouts/dashboardlayout/dashboardlayout'
 
 
 const App = props => {
@@ -79,9 +80,9 @@ const App = props => {
       <Switch>
         <Route path="/results" render={() => (
           <WithAuth>
-            <MainLayout>
+            <DashBoardLayout>
               <Resultspage />
-            </MainLayout>
+            </DashBoardLayout>
           </WithAuth>
         )} />
       </Switch>
