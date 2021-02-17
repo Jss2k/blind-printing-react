@@ -1,4 +1,4 @@
-import {countCorrectCharacters} from './../Utils/countCorrectCharacters'
+import {countCorrectCharacters, countErrorCharacters} from './../Utils/countCorrectCharacters'
 
 export const initialState = {
   text: ' ',
@@ -6,6 +6,10 @@ export const initialState = {
   characters: 0,
   seconds: 0,
   timerId: undefined,
+  errors: 0,
+  accuracy: 0,
+  textLength: 0,
+  allErrors: 0
 };
 
 export const ActionTypes = {
@@ -15,21 +19,19 @@ export const ActionTypes = {
   GET_TEXT: 'GET_TEXT',
 }
 
-// export interface Action<T> {
-//   type: ActionTypes;
-//   payload?: T;
-// }
-// type Transducer = (state: State, action: Action<any>) => State;
-// type Reducer<T = any> = (state: State, payload?: T) => State;
-export const changeText = (state, ntext) => ({
+export const changeText = (state, newtext) => ({
   ...state,
-  text: ntext
+  text: newtext,
+  textLength: newtext.length
 })
 
 export const changeInput = (state, input = '') => ({
   ...state,
   input,
   characters: countCorrectCharacters(state.text, input),
+  errors: countErrorCharacters(state.text, input),
+  accuracy: (((state.textLength - state.errors) / state.textLength) * 100).toFixed(2),
+  allErrors: state.allErrors > countErrorCharacters(state.text, input) ? state.allErrors : countErrorCharacters(state.text, input)
 })
 
 export const setTimer = (state, timerId) => ({

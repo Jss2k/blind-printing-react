@@ -15,8 +15,8 @@ const StartScreen = props => {
             Enter a short piece of text to see how fast you can type. Check your typing speed in wpm in English, Russian. To improve your score you can prepare for the test with the help of our guide.
           </div>
           <div className="call-to-action">
-            <Link to="/learn">
-              <span>Learn how to type text</span>
+            <Link to="/wpm-calculator">
+              <span>How to calculate wpm</span>
             </Link>
             <Link to="/test">
               <span>Take the typing test</span>

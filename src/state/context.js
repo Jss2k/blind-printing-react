@@ -42,20 +42,29 @@ export const useTyping = () => {
   
     useEffect(() => {
       fetchData();
-    }, [setParagraphs])
+    }, [])
+
+  const checkCyrillic = (str) => {
+    return /[а-я]/i.test(str)
+  }
+
   const getText = () => {
-
-      dispatch({ type: ActionTypes.GET_TEXT, payload: paragraphs })
-
+    dispatch({ type: ActionTypes.GET_TEXT, payload: paragraphs })
   }
 
   const onInput = (value) => {
+    
+    if (checkCyrillic(value)) {
+      alert('Please change your keyboard layout to English.')
+      return stopTimer()
+    } 
+    
     if (!state.timerId) {
       startTimer()
     }
-    if (state.input.length >= state.text.length - 1 ) {
+
+    if (state.input.length >= state.text.length ) {
       stopTimer()
-      history.push('/test/complete')
     }
     dispatch({ type: ActionTypes.CHANGE_INPUT, payload: value })
   }
