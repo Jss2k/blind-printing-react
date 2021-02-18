@@ -24,16 +24,20 @@ const PanelInfo = () => {
   let leftChar = textLength - (characters + errors)
   let accuracy = (((textLength - allErrors) / textLength) * 100).toFixed(2) || 100
 
+
+
   useEffect(() => {
     if ((characters + errors) === textLength && textLength !== 0) {
-      return dispatch(
-        addResultStart({
-          netWPM,
-          grossWPM,
-          accuracy,
-          resultUserUID: currentUser.id
-        })
-      )
+      if(currentUser) {
+        dispatch(
+          addResultStart({
+            netWPM,
+            grossWPM,
+            accuracy,
+            resultUserUID: currentUser.id
+          })
+        )
+      }
     }
 
   }, [leftChar])

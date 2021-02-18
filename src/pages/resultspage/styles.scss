@@ -1,3 +1,6 @@
+
+@import "./../../scss/variables";
+
 .results-table {
   width: fit-content;
   margin: 0 auto;
@@ -16,5 +19,9 @@
       }
     }
   }
+}
+
+.results-page {
+  height: calc(100vh - #{$headerHeight} - #{$footerHeight});
 }
 

@@ -1,8 +1,9 @@
 import React from 'react';
 import { TypingProvider } from './../../state/index';
-import UserInput from './../../components/userInput/userInput';
+// import UserInput from './../../components/userInput/userInput';
 import Preview from './../../components/preview/preview';
 import PanelInfo from './../../components/panelinfo/panelInfo';
+import InputDisplay from './../../components/inputdisplay/inputdisplay';
 
 const Testpage = () => {
   return (
@@ -12,7 +13,7 @@ const Testpage = () => {
         <div className='container'>
           <div className='typing-test'>
             <Preview />
-            <UserInput />
+            <InputDisplay />
           </div>
         </div>
         <PanelInfo />
