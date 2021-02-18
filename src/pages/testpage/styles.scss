@@ -17,6 +17,7 @@ textarea {
   line-height: 1.8;
   height: auto;
 }
+
 .container {
   width: 80%;
   padding: 4rem;
@@ -42,7 +43,6 @@ textarea {
 .typing-test {
   padding: 1.5rem;
   background-color: rgba(0, 0, 0, 0.8);
-  border: 1px solid var(--black);
   border-radius: 4px;
   min-width: 320px;
   font-size: 1.8rem;

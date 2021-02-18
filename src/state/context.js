@@ -58,7 +58,7 @@ export const useTyping = () => {
       alert('Please change your keyboard layout to English.')
       stopTimer()
       value = value.slice(0, -1)
-    } 
+    }
 
     if (!state.timerId) {
       startTimer()
