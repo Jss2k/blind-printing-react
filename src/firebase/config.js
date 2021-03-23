@@ -1,8 +1,8 @@
 export const firebaseConfig = {
-  apiKey: "AIzaSyBpvNZqn27WpUHfvaW7LJweOtVv2ZBHrR8",
-  authDomain: "blind-typing.firebaseapp.com",
-  projectId: "blind-typing",
-  storageBucket: "blind-typing.appspot.com",
-  messagingSenderId: "930955015573",
-  appId: "1:930955015573:web:87ebb15e48208c3bb3329c"
+  apiKey: "AIzaSyB1wP_Z_0_KW5kjffBGdGPbdcUSYbKIx_w",
+  authDomain: "react-chat-59f38.firebaseapp.com",
+  projectId: "react-chat-59f38",
+  storageBucket: "react-chat-59f38.appspot.com",
+  messagingSenderId: "693066231443",
+  appId: "1:693066231443:web:75dde5f89d492a3231e766"
 }
