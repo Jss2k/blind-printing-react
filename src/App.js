@@ -34,31 +34,21 @@ const App = props => {
             <Homepage />
           </MainLayout>
         )} />
-      </Switch>
-      <Switch>
         <Route path="/wpm-calculator" render={() => (
           <MainLayout>
             <Calculatorpage />
           </MainLayout>
         )} />
-      </Switch>
-      <Switch>
         <Route exact path="/test" render={() => (
           <MainLayout>
             <Testpage />
           </MainLayout>
         )} />
-      </Switch>
-      <Switch>
         <Route path="/test/start" render={() => (
             <MainLayout>
               <StartTest />
             </MainLayout>
           )} />
-      </Switch>
-      <Switch>
-      </Switch>
-      <Switch>
         <Route path="/login" render={() => (
           <MainLayout>
             <Loginpage />
@@ -69,15 +59,11 @@ const App = props => {
             <Recovery />
           </MainLayout>
         )} />
-      </Switch>
-      <Switch>
         <Route path="/registration" render={() => (
-          <MainLayout>
-            <Registrationpage />
-          </MainLayout>
+                    <MainLayout>
+                                  <Registrationpage />
+                    </MainLayout>
         )} />
-      </Switch>
-      <Switch>
         <Route path="/results" render={() => (
           <WithAuth>
             <DashBoardLayout>
